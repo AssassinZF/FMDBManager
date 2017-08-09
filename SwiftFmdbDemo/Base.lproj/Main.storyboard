@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftFmdbDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +21,80 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIr-za-WAV">
+                                <rect key="frame" x="36" y="517" width="92" height="30"/>
+                                <state key="normal" title="插入一条数据"/>
+                                <connections>
+                                    <action selector="insertOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9fC-yf-iEc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25K-eW-QRP">
+                                <rect key="frame" x="36" y="567" width="92" height="30"/>
+                                <state key="normal" title="更新一条数据"/>
+                                <connections>
+                                    <action selector="updateData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lmD-Bk-Yca"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMq-9T-df9">
+                                <rect key="frame" x="148" y="567" width="92" height="30"/>
+                                <state key="normal" title="删除一条数据"/>
+                                <connections>
+                                    <action selector="dateData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DE9-Zh-ZwB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m60-nY-SV6">
+                                <rect key="frame" x="36" y="617" width="92" height="30"/>
+                                <state key="normal" title="清空数据库表"/>
+                                <connections>
+                                    <action selector="clearTable:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hLA-zp-cHD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQY-eP-ETR">
+                                <rect key="frame" x="148" y="617" width="92" height="30"/>
+                                <state key="normal" title="查询所有数据"/>
+                                <connections>
+                                    <action selector="queryAllData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MTi-Ou-rSc"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fyx-I4-zJi">
+                                <rect key="frame" x="16" y="20" width="343" height="400"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="7Jl-CB-7dQ"/>
+                                </constraints>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbX-Hc-jkW">
+                                <rect key="frame" x="148" y="517" width="116" height="30"/>
+                                <state key="normal" title="批量插入2条数据"/>
+                                <connections>
+                                    <action selector="insertMore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e7o-Nn-A3Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="m60-nY-SV6" secondAttribute="bottom" constant="20" id="5bQ-3T-sI6"/>
+                            <constraint firstItem="hMq-9T-df9" firstAttribute="leading" secondItem="25K-eW-QRP" secondAttribute="trailing" constant="20" id="9B9-vJ-vzn"/>
+                            <constraint firstItem="25K-eW-QRP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="9tf-fR-1lG"/>
+                            <constraint firstItem="GIr-za-WAV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Fyc-x1-1g5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fyx-I4-zJi" secondAttribute="trailing" id="IKk-nd-0Qm"/>
+                            <constraint firstItem="m60-nY-SV6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="J3x-Yl-fGE"/>
+                            <constraint firstItem="hMq-9T-df9" firstAttribute="centerY" secondItem="25K-eW-QRP" secondAttribute="centerY" id="OF7-5X-tra"/>
+                            <constraint firstItem="OQY-eP-ETR" firstAttribute="leading" secondItem="m60-nY-SV6" secondAttribute="trailing" constant="20" id="Tjy-IC-W9s"/>
+                            <constraint firstItem="gbX-Hc-jkW" firstAttribute="centerY" secondItem="GIr-za-WAV" secondAttribute="centerY" id="TpE-u2-PUY"/>
+                            <constraint firstItem="25K-eW-QRP" firstAttribute="top" secondItem="GIr-za-WAV" secondAttribute="bottom" constant="20" id="V43-Lh-lxA"/>
+                            <constraint firstItem="gbX-Hc-jkW" firstAttribute="leading" secondItem="GIr-za-WAV" secondAttribute="trailing" constant="20" id="cfP-od-sY3"/>
+                            <constraint firstItem="m60-nY-SV6" firstAttribute="top" secondItem="25K-eW-QRP" secondAttribute="bottom" constant="20" id="dSc-5V-74L"/>
+                            <constraint firstItem="Fyx-I4-zJi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ekE-MT-HkE"/>
+                            <constraint firstItem="Fyx-I4-zJi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="etW-aJ-PMJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OQY-eP-ETR" secondAttribute="bottom" constant="20" id="re6-tb-wof"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="insertMore" destination="gbX-Hc-jkW" id="ADs-Pk-6Ou"/>
+                        <outlet property="tableView" destination="Fyx-I4-zJi" id="lh2-AL-MLc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

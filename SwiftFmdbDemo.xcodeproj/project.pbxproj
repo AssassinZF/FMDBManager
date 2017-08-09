@@ -14,6 +14,14 @@
 		54963E8F1F395C6C00F0362E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54963E8D1F395C6C00F0362E /* LaunchScreen.storyboard */; };
 		54963E9A1F395C6C00F0362E /* SwiftFmdbDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54963E991F395C6C00F0362E /* SwiftFmdbDemoTests.swift */; };
 		54963EA51F395C6C00F0362E /* SwiftFmdbDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54963EA41F395C6C00F0362E /* SwiftFmdbDemoUITests.swift */; };
+		54963ECF1F395D2000F0362E /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 54963EC61F395D2000F0362E /* FMDatabase.m */; };
+		54963ED01F395D2000F0362E /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54963EC81F395D2000F0362E /* FMDatabaseAdditions.m */; };
+		54963ED11F395D2000F0362E /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 54963ECA1F395D2000F0362E /* FMDatabasePool.m */; };
+		54963ED21F395D2000F0362E /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 54963ECC1F395D2000F0362E /* FMDatabaseQueue.m */; };
+		54963ED31F395D2000F0362E /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 54963ECE1F395D2000F0362E /* FMResultSet.m */; };
+		54963ED71F395E2F00F0362E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 54963ED61F395E2F00F0362E /* libsqlite3.tbd */; };
+		54963EDB1F3965BF00F0362E /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54963EDA1F3965BF00F0362E /* DBManager.swift */; };
+		54963EDD1F39DC9A00F0362E /* DBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54963EDC1F39DC9A00F0362E /* DBModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +55,21 @@
 		54963EA01F395C6C00F0362E /* SwiftFmdbDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftFmdbDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54963EA41F395C6C00F0362E /* SwiftFmdbDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFmdbDemoUITests.swift; sourceTree = "<group>"; };
 		54963EA61F395C6C00F0362E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54963EC41F395D2000F0362E /* SwiftFmdbDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftFmdbDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		54963EC51F395D2000F0362E /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		54963EC61F395D2000F0362E /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		54963EC71F395D2000F0362E /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		54963EC81F395D2000F0362E /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		54963EC91F395D2000F0362E /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		54963ECA1F395D2000F0362E /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		54963ECB1F395D2000F0362E /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		54963ECC1F395D2000F0362E /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		54963ECD1F395D2000F0362E /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		54963ECE1F395D2000F0362E /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		54963ED41F395D5C00F0362E /* FMDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		54963ED61F395E2F00F0362E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		54963EDA1F3965BF00F0362E /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		54963EDC1F39DC9A00F0362E /* DBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54963ED71F395E2F00F0362E /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +105,7 @@
 				54963E981F395C6C00F0362E /* SwiftFmdbDemoTests */,
 				54963EA31F395C6C00F0362E /* SwiftFmdbDemoUITests */,
 				54963E821F395C6B00F0362E /* Products */,
+				54963ED51F395E2F00F0362E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +122,11 @@
 		54963E831F395C6C00F0362E /* SwiftFmdbDemo */ = {
 			isa = PBXGroup;
 			children = (
+				54963EB21F395C9500F0362E /* FMDB */,
 				54963E841F395C6C00F0362E /* AppDelegate.swift */,
 				54963E861F395C6C00F0362E /* ViewController.swift */,
+				54963EDA1F3965BF00F0362E /* DBManager.swift */,
+				54963EDC1F39DC9A00F0362E /* DBModel.swift */,
 				54963E881F395C6C00F0362E /* Main.storyboard */,
 				54963E8B1F395C6C00F0362E /* Assets.xcassets */,
 				54963E8D1F395C6C00F0362E /* LaunchScreen.storyboard */,
@@ -123,6 +151,33 @@
 				54963EA61F395C6C00F0362E /* Info.plist */,
 			);
 			path = SwiftFmdbDemoUITests;
+			sourceTree = "<group>";
+		};
+		54963EB21F395C9500F0362E /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				54963ED41F395D5C00F0362E /* FMDB.h */,
+				54963EC51F395D2000F0362E /* FMDatabase.h */,
+				54963EC61F395D2000F0362E /* FMDatabase.m */,
+				54963EC71F395D2000F0362E /* FMDatabaseAdditions.h */,
+				54963EC81F395D2000F0362E /* FMDatabaseAdditions.m */,
+				54963EC91F395D2000F0362E /* FMDatabasePool.h */,
+				54963ECA1F395D2000F0362E /* FMDatabasePool.m */,
+				54963ECB1F395D2000F0362E /* FMDatabaseQueue.h */,
+				54963ECC1F395D2000F0362E /* FMDatabaseQueue.m */,
+				54963ECD1F395D2000F0362E /* FMResultSet.h */,
+				54963ECE1F395D2000F0362E /* FMResultSet.m */,
+				54963EC41F395D2000F0362E /* SwiftFmdbDemo-Bridging-Header.h */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		54963ED51F395E2F00F0362E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54963ED61F395E2F00F0362E /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +248,7 @@
 				TargetAttributes = {
 					54963E801F395C6B00F0362E = {
 						CreatedOnToolsVersion = 8.3.1;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					54963E941F395C6C00F0362E = {
@@ -259,8 +315,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54963ECF1F395D2000F0362E /* FMDatabase.m in Sources */,
 				54963E871F395C6C00F0362E /* ViewController.swift in Sources */,
+				54963ED31F395D2000F0362E /* FMResultSet.m in Sources */,
+				54963EDB1F3965BF00F0362E /* DBManager.swift in Sources */,
+				54963ED11F395D2000F0362E /* FMDatabasePool.m in Sources */,
+				54963EDD1F39DC9A00F0362E /* DBModel.swift in Sources */,
 				54963E851F395C6C00F0362E /* AppDelegate.swift in Sources */,
+				54963ED01F395D2000F0362E /* FMDatabaseAdditions.m in Sources */,
+				54963ED21F395D2000F0362E /* FMDatabaseQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,10 +477,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftFmdbDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lzf.SwiftFmdbDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftFmdbDemo/FMDB/SwiftFmdbDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -426,10 +492,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftFmdbDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lzf.SwiftFmdbDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftFmdbDemo/FMDB/SwiftFmdbDemo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
